@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --theme:#2970ff;
+  --black:#000;
+  --white:#fff;
+  --shadow:0px 0px 30px 8px rgba(227, 227, 227,0.75);
+}
+input{
+  font-family: "Montserrat", serif;
+}
+.custom-input{
+  border: 0px;
+  outline: none;
+  border-bottom: 1px solid black;
+  padding:  0.5rem 0rem;
+  width: 100%;
+  border-radius: 0;
+}
+.custom-input::placeholder{
+  color: rgba(0, 0 , 0, 0.5);
+}
+.custom-input:focus{
+  outline: none;
+  border: none;
+  opacity: 1;;
+  transition: all 0.3s;
+}
+.input-flex{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
+  padding: 0rem 0.5rem;
+}
+.input-flex input{
+  width: 90%;
+  padding: 0.5rem;
+  border: 0;
+}
+
+.input-flex input:focus{
+  outline: none;
+}
+.select-input{
+  width: 20%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+.select-input > div {
+  border: 0px solid white;
+}
+.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  border: 0px;
+  outline: none;
+}
+.charts-wrapper{
+  height: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.MyTransaction-part{
+  display: flex;
+  align-items: center;
+}
+.mytransaction-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:1000px) {
+  .sorting-dropdown{
+    display: block !important;
+    width: 30%;
+    min-width: 170px;
+  }
+  .sorting-radio{
+    display: none !important;
+  }
+
+}
+
+@media screen and (max-width:905px) {
+  .charts-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+@media screen and (max-width:805px) {
+  .mytransaction-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .MyTransaction-part{
+    width: 100%;
+  }
+}
