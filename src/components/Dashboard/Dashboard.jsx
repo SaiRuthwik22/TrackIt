@@ -64,6 +64,7 @@ function Dashboard() {
       newArr.push(transaction);
       setTransactions(newArr);
       calculateBalance();
+      fetchTransactions()
       console.log("Document written with ID: ", docRef.id);
       if (!many) toast.success("Transaction Added!");
     } catch (e) {
